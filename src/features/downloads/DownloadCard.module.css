@@ -1,0 +1,10 @@
+.head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+.tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.meta { display: grid; gap: 4px; margin: 20px 0; font-size: 0.9rem; }
+.meta div { display: flex; gap: 16px; }
+.meta dt { width: 90px; color: var(--fg-faint); flex: none; }
+.meta dd { margin: 0; color: var(--fg); min-width: 0; }
+.hash { overflow-wrap: anywhere; }
+.block { margin-bottom: 20px; font-size: 0.9rem; color: var(--fg-dim); }
+.block h4 { margin: 0 0 4px; font-size: 0.9rem; color: var(--fg); }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }

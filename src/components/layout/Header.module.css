@@ -1,0 +1,14 @@
+.header { position: sticky; top: 0; z-index: 10; background: rgba(1, 8, 5, 0.92); border-bottom: 1px solid var(--line-dim); backdrop-filter: blur(6px); }
+.inner { min-height: var(--header-h); display: flex; align-items: center; justify-content: space-between; gap: 16px; position: relative; }
+.brand { text-decoration: none; }
+.nav { display: flex; gap: 6px; }
+.link { padding: 4px 12px; font-size: 0.9rem; text-decoration: none; color: var(--fg-dim); border-radius: var(--radius); transition: color 0.15s, background 0.15s; }
+.link:hover { color: var(--fg); background: rgba(61, 255, 122, 0.1); }
+.active, .active:hover { background: var(--fg); color: var(--bg); font-weight: 700; }
+.toggle { display: none; font: inherit; color: var(--fg); background: none; border: 1px solid var(--line); border-radius: var(--radius); padding: 6px 12px; min-height: 40px; cursor: pointer; }
+@media (max-width: 760px) {
+  .toggle { display: block; }
+  .nav { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; padding: 12px; background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); }
+  .nav.open { display: flex; }
+  .link { padding: 12px; }
+}

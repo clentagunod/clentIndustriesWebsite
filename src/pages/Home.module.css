@@ -1,0 +1,8 @@
+.page { padding-block: 64px 96px; display: grid; gap: 64px; }
+.hero { display: grid; gap: 20px; justify-items: start; }
+.hero h1 { max-width: 20ch; text-shadow: 0 0 24px rgba(61, 255, 122, 0.35); }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+.term { max-width: 760px; width: 100%; }
+.featured { display: grid; gap: 16px; max-width: 760px; }
+.values { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+.value { border-left: 2px solid var(--line); padding-left: 16px; display: grid; gap: 6px; }

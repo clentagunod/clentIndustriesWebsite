@@ -1,0 +1,15 @@
+:root {
+  --bg: #010805;
+  --bg-raised: #03110a;
+  --line: #0f6b31;
+  --line-dim: #0a3018;
+  --fg: #3dff7a;
+  --fg-dim: #2a9d52;
+  --fg-faint: #1a6b38;
+  --accent: #ffbd2e;
+  --danger: #ff5f56;
+  --font: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  --radius: 4px;
+  --content: 1080px;
+  --header-h: 60px;
+}

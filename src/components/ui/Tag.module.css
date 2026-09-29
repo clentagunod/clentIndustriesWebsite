@@ -1,0 +1,2 @@
+.tag { display: inline-block; padding: 0 8px; font-size: 0.8rem; border: 1px solid var(--line); border-radius: var(--radius); color: var(--fg-dim); }
+.accent { color: var(--accent); border-color: var(--accent); }

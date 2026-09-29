@@ -1,0 +1,4 @@
+.shell { min-height: 100vh; display: flex; flex-direction: column; }
+.main { flex: 1; }
+.skip { position: absolute; left: 8px; top: -60px; z-index: 20; padding: 8px 12px; background: var(--fg); color: var(--bg); }
+.skip:focus { top: 8px; }

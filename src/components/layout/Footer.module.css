@@ -1,0 +1,3 @@
+.footer { border-top: 1px solid var(--line-dim); padding-block: 24px; font-size: 0.85rem; color: var(--fg-dim); }
+.inner { display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; }
+.links { display: flex; gap: 20px; }

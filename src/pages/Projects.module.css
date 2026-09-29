@@ -1,0 +1,19 @@
+.pagePreview {
+  width: min(100%, 720px);
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg);
+  box-shadow: 0 0 32px rgba(61, 255, 122, 0.08);
+}
+
+.pagePreview iframe {
+  display: block;
+  width: 200%;
+  height: 200%;
+  border: 0;
+  pointer-events: none;
+  transform: scale(0.5);
+  transform-origin: top left;
+}
