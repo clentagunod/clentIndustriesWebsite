@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { siteConfig } from '@/config/site';
 import { downloads } from '@/data/downloads';
 import { useSequence } from '@/hooks/useSequence';
+import { CensoredText } from '@/components/ui/CensoredText';
 import { TerminalWindow } from '@/components/ui/TerminalWindow';
 import { COMMANDS, runCommand } from './commands';
 import s from './InteractiveTerminal.module.css';
@@ -80,7 +81,7 @@ export function InteractiveTerminal() {
           l.kind === 'in' ? (
             <p key={l.id} className={s.in}><span className={s.prompt}>$</span> {l.text}</p>
           ) : (
-            <p key={l.id} className={s.out}>{l.text}</p>
+            <p key={l.id} className={s.out}><CensoredText text={l.text} /></p>
           ),
         )}
         <form onSubmit={onSubmit} className={s.form}>

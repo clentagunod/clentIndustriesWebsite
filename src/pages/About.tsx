@@ -1,5 +1,6 @@
 import { siteConfig } from '@/config/site';
 import { useDocumentTitle } from '@/hooks/useDocumentTitle';
+import { CensoredText } from '@/components/ui/CensoredText';
 import { TerminalWindow } from '@/components/ui/TerminalWindow';
 
 export default function About() {
@@ -8,7 +9,7 @@ export default function About() {
     <div className="container page">
       <header className="page-head">
         <h1>About {siteConfig.name}</h1>
-        <p>{siteConfig.mission}</p>
+        <p><CensoredText text={siteConfig.mission} /></p>
       </header>
       <div style={{ display: 'grid', gap: 24, gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))' }}>
         {siteConfig.values.map((v) => (

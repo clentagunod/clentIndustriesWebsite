@@ -3,6 +3,7 @@ import { downloads } from '@/data/downloads';
 import { useDocumentTitle } from '@/hooks/useDocumentTitle';
 import { LogoMark } from '@/components/ui/Logo';
 import { Button } from '@/components/ui/Button';
+import { CensoredText } from '@/components/ui/CensoredText';
 import { InteractiveTerminal } from '@/components/terminal/InteractiveTerminal';
 import { DownloadCard } from '@/features/downloads/DownloadCard';
 import s from './Home.module.css';
@@ -15,8 +16,8 @@ export default function Home() {
     <div className={`container ${s.page}`}>
       <section className={s.hero}>
         <LogoMark size={72} />
-        <h1>{siteConfig.tagline}</h1>
-        <p>{siteConfig.mission}</p>
+        <h1><CensoredText text={siteConfig.tagline} /></h1>
+        <p><CensoredText text={siteConfig.mission} /></p>
         <div className={s.cta}>
           <Button to="/projects">Explore our work</Button>
           <Button to="/downloads" variant="outline">Get the software</Button>
