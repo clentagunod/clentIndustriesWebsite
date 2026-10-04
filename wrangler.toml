@@ -1,0 +1,9 @@
+name = "clent-industries"
+compatibility_date = "2026-10-04"
+pages_build_output_dir = "./dist"
+
+[[d1_databases]]
+binding = "DOWNLOAD_COUNTS"
+database_name = "clent-industries-download-counts"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+migrations_dir = "migrations"

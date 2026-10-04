@@ -54,9 +54,21 @@ export default function DownloadComplete() {
 
   useDocumentTitle(item ? `Downloading ${item.name}` : 'Download not found');
 
-  useEffect(() => {
-    if (!item || started.current) return;
-    started.current = true;
+  function startDownload() {
+    if (!item) return;
+
+    fetch(`/api/download/${encodeURIComponent(item.id)}`, {
+      method: 'POST',
+      keepalive: true,
+    })
+      .then((response) => {
+        if (response.status !== 204) {
+          throw new Error(`Download tracking request failed (${response.status}).`);
+        }
+      })
+      .catch((error: unknown) => {
+        console.error(`Unable to track the download start for "${item.id}".`, error);
+      });
 
     const link = document.createElement('a');
     link.href = item.fileUrl;
@@ -64,6 +76,12 @@ export default function DownloadComplete() {
     document.body.appendChild(link);
     link.click();
     link.remove();
+  }
+
+  useEffect(() => {
+    if (!item || started.current) return;
+    started.current = true;
+    startDownload();
   }, [item]);
 
   if (!item) return <Navigate to="/downloads" replace />;
@@ -77,7 +95,16 @@ export default function DownloadComplete() {
         <h1>Thank you for downloading!</h1>
         <p>
           Your download should start automatically. If it does not,{' '}
-          <a href={item.fileUrl} download={item.fileName}>click here to download {item.fileName}</a>.
+          <a
+            href={item.fileUrl}
+            download={item.fileName}
+            onClick={(event) => {
+              event.preventDefault();
+              startDownload();
+            }}
+          >
+            click here to download {item.fileName}
+          </a>.
         </p>
       </header>
 
