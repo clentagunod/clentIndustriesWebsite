@@ -9,10 +9,9 @@ interface Props {
   item: DownloadItem;
   /** Compact cards hide requirements and changelog (used on Home). */
   compact?: boolean;
-  downloadCount?: number;
 }
 
-export function DownloadCard({ item, compact = false, downloadCount }: Props) {
+export function DownloadCard({ item, compact = false }: Props) {
   const latest = item.changelog[0];
 
   return (
@@ -26,11 +25,6 @@ export function DownloadCard({ item, compact = false, downloadCount }: Props) {
         </div>
       </div>
       <p>{compact ? item.tagline : item.description}</p>
-      {downloadCount !== undefined && (
-        <p className={s.downloadCount}>
-          {downloadCount.toLocaleString()} download {downloadCount === 1 ? 'start' : 'starts'}
-        </p>
-      )}
 
       {!compact && (
         <dl className={s.meta}>

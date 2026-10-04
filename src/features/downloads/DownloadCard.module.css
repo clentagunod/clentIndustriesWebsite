@@ -5,7 +5,6 @@
 .meta dt { width: 90px; color: var(--fg-faint); flex: none; }
 .meta dd { margin: 0; color: var(--fg); min-width: 0; }
 .hash { overflow-wrap: anywhere; }
-.downloadCount { margin: 12px 0 0; color: var(--fg-faint); font-size: 0.85rem; }
 .block { margin-bottom: 20px; font-size: 0.9rem; color: var(--fg-dim); }
 .block h4 { margin: 0 0 4px; font-size: 0.9rem; color: var(--fg); }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
