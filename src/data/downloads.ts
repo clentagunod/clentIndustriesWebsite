@@ -9,33 +9,69 @@ export const downloads: readonly DownloadItem[] = [
   {
     id: 'auto-post-studio',
     name: 'AutoPost Studio',
-    tagline: 'Automation for posting academic information',
+    tagline: 'Create, format, and publish school posts with ease',
     description:
-      '',
+      'A desktop social media automation tool for schools and educational organizations. AutoPost Studio lets users add photos, automatically apply a school-branded image template, create polished Facebook captions from keywords using AI, review and edit content, save finished graphics, and publish approved posts directly to a Facebook Page. Built for simple, consistent, and efficient school communication without requiring Canva or complex editing software.',
     version: '1.1.5',
     channel: 'stable',
     platform: 'windows',
-    fileUrl: '/downloads/EduAutomata-Setup.exe',
+    fileUrl: '/downloads/AutoPostStudio-Setup.exe',
     fileName: 'AutoPostStudio-Setup.exe',
-    sizeLabel: '27.8 mb',
-    requirements: ['Windows 10, 11 or later (64-bit)', 'Internet connection required'],
-    changelog: [{ version: '1.0.0', date: '2026-09-30', notes: ['First public stable release.'] }],
-    available: false,
+    sizeLabel: '46.2 MB',
+    requirements: [
+      'Windows 10 or Windows 11 (64-bit)',
+      'Internet connection required for AI API and Facebook publishing',
+      'At least 4 GB RAM',
+      'At least 200 MB available disk space'
+    ],
+    changelog: [
+      {
+        version: '1.1.5',
+        date: '2026-10-04',
+        notes: [
+          'Improved school-branded photo template generation.',
+          'Added AI-assisted caption generation from keywords.',
+          'Added support for manually written full captions.',
+          'Improved image preview and automatic photo cropping.',
+          'Improved Facebook Page publishing workflow.',
+          'Added post review before publishing.',
+          'Improved error handling and application stability.'
+        ]
+      },
+      {
+        version: '1.1.5',
+        date: '2026-09-30',
+        notes: [
+          'First public stable release.'
+        ]
+      }
+    ],
+    available: true,
   },
   {
     id: 'edu-automata',
     name: 'Edu Automata',
-    tagline: 'Automation for everyday school tasks.',
+    tagline: 'Simple, local learner recordkeeping.',
     description:
-      'Edu Automata is a Windows desktop app that automates repetitive education work so you can spend the time on teaching and learning instead dawg.',
+      'Manage learner profiles and record weekly attendance, activity scores, and assessment scores. Review attendance rates and score summaries with built-in charts, and export your records to an Excel workbook that updates in the background. Your data is stored locally, and the app works offline without requiring Python to be installed.',
     version: '1.0.0',
     channel: 'beta',
     platform: 'windows',
     fileUrl: '/downloads/EduAutomata-Setup.exe',
     fileName: 'EduAutomata-Setup.exe',
-    sizeLabel: '27.8 mb',
-    requirements: ['Windows 10, 11 or later (64-bit)', 'Internet connection not required'],
-    changelog: [{ version: '1.0.0', date: '2026-09-29', notes: ['First public beta release.'] }],
+    sizeLabel: '27.8 MB',
+    requirements: [
+      'Windows 10 or later (64-bit)',
+      'No internet connection required; records are stored locally',
+      'Python installation not required',
+    ],
+    changelog: [
+      {
+        version: '1.0.0',
+        date: '2026-09-29',
+        notes: ['First public beta release.'],
+      },
+    ],
     available: true,
   },
  
