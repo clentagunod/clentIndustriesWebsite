@@ -7,6 +7,22 @@ import type { DownloadItem } from '@/types/download';
  */
 export const downloads: readonly DownloadItem[] = [
   {
+    id: 'auto-post-studio',
+    name: 'AutoPost Studio',
+    tagline: 'Automation for posting academic information',
+    description:
+      '',
+    version: '1.1.5',
+    channel: 'stable',
+    platform: 'windows',
+    fileUrl: '/downloads/EduAutomata-Setup.exe',
+    fileName: 'AutoPostStudio-Setup.exe',
+    sizeLabel: '27.8 mb',
+    requirements: ['Windows 10, 11 or later (64-bit)', 'Internet connection required'],
+    changelog: [{ version: '1.0.0', date: '2026-09-30', notes: ['First public stable release.'] }],
+    available: false,
+  },
+  {
     id: 'edu-automata',
     name: 'Edu Automata',
     tagline: 'Automation for everyday school tasks.',
@@ -22,4 +38,5 @@ export const downloads: readonly DownloadItem[] = [
     changelog: [{ version: '1.0.0', date: '2026-09-29', notes: ['First public beta release.'] }],
     available: true,
   },
+ 
 ];

@@ -1,4 +1,4 @@
-export type ReleaseChannel = 'stable' | 'beta';
+export type ReleaseChannel = 'stable' | 'beta' ;
 export type Platform = 'windows' | 'macos' | 'linux';
 
 export interface ChangelogEntry {

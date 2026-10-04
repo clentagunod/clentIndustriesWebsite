@@ -6,6 +6,7 @@ import Maintenance from '@/pages/Maintenance';
 
 // Home is eager (first paint); other routes are split into separate chunks.
 const Downloads = lazy(() => import('@/pages/Downloads'));
+const DownloadComplete = lazy(() => import('@/pages/DownloadComplete'));
 const Projects = lazy(() => import('@/pages/Projects'));
 const About = lazy(() => import('@/pages/About'));
 const Contact = lazy(() => import('@/pages/Contact'));
@@ -22,6 +23,7 @@ export default function App() {
         <Route element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="downloads" element={<Downloads />} />
+          <Route path="download/:id" element={<DownloadComplete />} />
           <Route path="projects" element={<Projects />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />

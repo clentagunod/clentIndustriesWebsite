@@ -5,7 +5,7 @@ export const siteConfig = {
   name: 'ClentIndustries',
   tagline: 'We build useful things on the fucking internet.',
   mission:
-    'Our education system might be a goddamn mess, and here I am, starting my own revolution.',
+    'Our education system might be a goddamn mess, and here we are, starting our own revolution.',
   contact: {
     email: 'donugaclent@gmail.com', // TODO: replace with your real address
     links: [

@@ -20,6 +20,17 @@ export interface WebProject extends ProjectBase {
 export type Project = SoftwareProject | WebProject;
 
 export const projects: readonly Project[] = [
+
+  {
+    id: 'auto-post-studio',
+    discipline: 'software',
+    name: 'AutoPost Studio',
+    summary: 'Automation for posting academic information.',
+    stack: ['Windows', 'Desktop'],
+    status: 'released',
+    href: '/downloads',
+  },
+
   {
     id: 'edu-automata',
     discipline: 'software',
@@ -29,6 +40,8 @@ export const projects: readonly Project[] = [
     status: 'released',
     href: '/downloads',
   },
+
+  
 
   {
   id: 'edash-website',

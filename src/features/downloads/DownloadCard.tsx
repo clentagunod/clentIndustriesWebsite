@@ -30,7 +30,10 @@ export function DownloadCard({ item, compact = false }: Props) {
         <dl className={s.meta}>
           <div><dt>file</dt><dd>{item.fileName}</dd></div>
           <div><dt>size</dt><dd>{item.sizeLabel}</dd></div>
-          {latest && <div><dt>released</dt><dd>{formatDate(latest.date)}</dd></div>}
+          <div>
+            <dt>released</dt>
+            <dd>{item.available && latest ? formatDate(latest.date) : 'Coming soon'}</dd>
+          </div>
           {item.sha256 && <div><dt>sha256</dt><dd className={s.hash}>{item.sha256}</dd></div>}
         </dl>
       )}
@@ -51,7 +54,7 @@ export function DownloadCard({ item, compact = false }: Props) {
 
       <div className={s.actions}>
         {item.available ? (
-          <Button href={item.fileUrl} download={item.fileName}>Download {item.fileName}</Button>
+          <Button to={`/download/${item.id}`}>Download {item.fileName}</Button>
         ) : (
           <Button variant="outline" disabled>Coming soon</Button>
         )}

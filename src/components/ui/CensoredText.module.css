@@ -10,5 +10,8 @@
   left: -0.06em;
   border-top: 2px solid var(--danger);
   content: '';
-  transform: rotate(-4deg);
+}
+
+.fucking::after {
+  border-top-width: 10px;
 }

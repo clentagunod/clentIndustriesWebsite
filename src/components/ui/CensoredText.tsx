@@ -7,7 +7,12 @@ export function CensoredText({ text }: { text: string }) {
     <>
       {text.split(censoredWords).map((part, index) =>
         /^(fucking|goddamn)$/i.test(part) ? (
-          <span key={index} className={s.censored}>{part}</span>
+          <span
+            key={index}
+            className={`${s.censored} ${/^fucking$/i.test(part) ? s.fucking : ''}`}
+          >
+            {part}
+          </span>
         ) : (
           part
         ),
