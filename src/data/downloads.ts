@@ -39,7 +39,7 @@ export const downloads: readonly DownloadItem[] = [
         ]
       },
       {
-        version: '1.1.5',
+        version: '1.1.6',
         date: '2026-09-30',
         notes: [
           'First public stable release.'
