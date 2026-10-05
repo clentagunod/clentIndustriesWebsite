@@ -12,12 +12,12 @@ export const downloads: readonly DownloadItem[] = [
     tagline: 'Create, format, and publish school posts with ease',
     description:
       'A desktop social media automation tool for schools and educational organizations. AutoPost Studio lets users add photos, automatically apply a school-branded image template, create polished Facebook captions from keywords using AI, review and edit content, save finished graphics, and publish approved posts directly to a Facebook Page. Built for simple, consistent, and efficient school communication without requiring Canva or complex editing software.',
-    version: '1.1.5',
+    version: '2.1.1',
     channel: 'stable',
     platform: 'windows',
     fileUrl: '/downloads/AutoPostStudio-Setup.exe',
     fileName: 'AutoPostStudio-Setup.exe',
-    sizeLabel: '46.2 MB',
+    sizeLabel: '52.7 MB',
     requirements: [
       'Windows 10 or Windows 11 (64-bit)',
       'Internet connection required for AI API and Facebook publishing',
@@ -26,16 +26,12 @@ export const downloads: readonly DownloadItem[] = [
     ],
     changelog: [
       {
-        version: '1.1.5',
+        version: '2.1.1',
         date: '2026-10-04',
         notes: [
-          'Improved school-branded photo template generation.',
           'Added AI-assisted caption generation from keywords.',
           'Added support for manually written full captions.',
-          'Improved image preview and automatic photo cropping.',
-          'Improved Facebook Page publishing workflow.',
-          'Added post review before publishing.',
-          'Improved error handling and application stability.'
+          'Added google drive image imports. ',
         ]
       },
       {

@@ -16,6 +16,7 @@ export const siteConfig = {
   nav: [
     { label: './home', to: '/' },
     { label: './downloads', to: '/downloads' },
+    { label: './docs', to: '/docs' },
     { label: './projects', to: '/projects' },
     { label: './about', to: '/about' },
     { label: './contact', to: '/contact' },

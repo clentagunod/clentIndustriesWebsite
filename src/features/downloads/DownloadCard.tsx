@@ -1,4 +1,5 @@
 import type { DownloadItem } from '@/types/download';
+import { setupGuides } from '@/data/docs';
 import { formatDate, platformLabel } from '@/lib/format';
 import { Button } from '@/components/ui/Button';
 import { Tag } from '@/components/ui/Tag';
@@ -13,6 +14,7 @@ interface Props {
 
 export function DownloadCard({ item, compact = false }: Props) {
   const latest = item.changelog[0];
+  const guide = setupGuides.find((setupGuide) => setupGuide.downloadId === item.id);
 
   return (
     <TerminalWindow as="article" title={`./downloads/${item.id}`}>
@@ -57,6 +59,9 @@ export function DownloadCard({ item, compact = false }: Props) {
           <Button to={`/download/${item.id}`}>Download {item.fileName}</Button>
         ) : (
           <Button variant="outline" disabled>Coming soon</Button>
+        )}
+        {!compact && guide && (
+          <Button to={`/docs#${guide.id}`} variant="outline">Show docs</Button>
         )}
         {compact && <Button to="/downloads" variant="outline">All downloads</Button>}
       </div>
