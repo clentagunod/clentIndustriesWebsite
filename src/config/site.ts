@@ -3,9 +3,9 @@ import type { NavItem } from '@/types/nav';
 /** Single source of truth for site-wide copy. Edit here, not in components. */
 export const siteConfig = {
   name: 'ClentIndustries',
-  tagline: 'We build useful things on the fucking internet.',
+  tagline: 'We build things. Conceivable things.',
   mission:
-    'Our education system might be a goddamn mess, and here we are, starting our own revolution.',
+    'Here we are, building our own revolution in education dawg.',
   contact: {
     email: 'donugaclent@gmail.com', // TODO: replace with your real address
     links: [
