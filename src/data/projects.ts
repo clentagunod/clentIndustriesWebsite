@@ -50,10 +50,10 @@ export const projects: readonly Project[] = [
   summary: 'School dashboard',
   stack: ['React', 'CSS'],
   status: 'in-development',
-  websiteUrl: 'https://sanroque-edash.vercel.app/',
+  websiteUrl: 'https://edash-temp.vercel.app/',
   currentPage: {
     title: 'Homepage',
-    url: 'https://sanroque-edash.vercel.app/',
+    url: 'https://edash-temp.vercel.app/',
     },
   },
 ];
